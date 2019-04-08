@@ -14,8 +14,42 @@
  * 2. 当父类中没有空参数的构造函数视乎，子类必须手动通过super语句形式来指定要访问父类中的构造函数
  * 
  * 3. 子
+ * 
+ * final: 最终 作为一个修饰符
+ * 
+ * 1. 可以修饰类 函数 变量
+ * 
+ * 2. 被final 修饰的类不可以继承，为了避免继承，被子类腹泻功能
+ * 
+ * 3. 被final 修饰的方法不可以被改写，
+ * 
+ * 4. 变量只能赋值一次，可以是一个常量，固定数据，通常为大写
+ * 
+ * 抽象类 1. 抽象方法一定在抽象类中
+ * 
+ * 2. 抽象方法和抽象类都必须被abstract 关键字修饰
+ * 
+ * 3. 抽象方法不可以 用new
+ * 
+ * 4. 抽象类中的方法要被使用，必须有子类复写所有的抽象方法后，建立子类对象调用，如果子类覆盖了部分抽象方法，那么该子类 还是一个抽象类
+ * 
+ * 
+ * 抽象类和一般类不同：
+ * 
+ * 正常描述事务，只不过是该事务出现了一些看不懂的东西。
+ * 
+ * 抽象只能描述方法，可以不定义抽象方法
  */
-class Fu {
+
+abstract class Student {
+    abstract void Study();
+
+    void sleep() {
+        System.out.println("sleep");
+    }
+}
+
+class Fu extends Student {
     public String houname = "isam2016";
 
     Fu() {
@@ -23,9 +57,14 @@ class Fu {
         System.out.println("fu");
     }
 
+    void Study() {
+        System.out.println("student");
+    }
+
     private int num = 4;
 
     // public void show() { 子类不能覆盖，权限不够
+    // final void show() {
     void show() {
         System.out.println(this.num);
     }
@@ -44,6 +83,12 @@ class Z1 extends Fu {
         System.out.println(this.num);
     }
 
+}
+
+final class Final {
+    void show() {
+        System.out.println("final");
+    }
 }
 
 public class Main {
