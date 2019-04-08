@@ -13,7 +13,7 @@
  * 
  * 2. 当父类中没有空参数的构造函数视乎，子类必须手动通过super语句形式来指定要访问父类中的构造函数
  * 
- * 3. 子
+ * 3. 子类中的构造函数第一行也可以手动指定this 语句来访问本类中的构造函数，子类中至少有一个构造函数会访问父类中的构造函数
  * 
  * final: 最终 作为一个修饰符
  * 
@@ -39,6 +39,7 @@
  * 正常描述事务，只不过是该事务出现了一些看不懂的东西。
  * 
  * 抽象只能描述方法，可以不定义抽象方法
+ * 
  */
 
 abstract class Student {
@@ -53,8 +54,12 @@ class Fu extends Student {
     public String houname = "isam2016";
 
     Fu() {
-        this.houname = "isam2017";
         System.out.println("fu");
+        this.houname = "isam2017";
+    }
+
+    Fu(int x) {
+        System.out.println("fu" + x);
     }
 
     void Study() {
@@ -66,15 +71,21 @@ class Fu extends Student {
     // public void show() { 子类不能覆盖，权限不够
     // final void show() {
     void show() {
-        System.out.println(this.num);
-    }
 
+    }
 }
 
 class Z1 extends Fu {
     Z1() {
-        // super();会有一个隐藏的调用
-        System.out.println("zi");
+        // super(4);会有一个隐藏的调用
+        System.out.println("z");
+    }
+
+    Z1(int x) {
+        this();
+        // super(4);会有一个隐藏的调用
+        System.out.println("zi" + x);
+
     }
 
     int num = 5;
@@ -82,7 +93,6 @@ class Z1 extends Fu {
     void show() {
         System.out.println(this.num);
     }
-
 }
 
 final class Final {
@@ -93,7 +103,7 @@ final class Final {
 
 public class Main {
     public static void main(String[] args) {
-        Z1 z = new Z1();
+        Z1 z = new Z1(0);
         z.show();
         System.out.println(z.houname);
 
