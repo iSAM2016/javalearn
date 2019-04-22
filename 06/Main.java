@@ -66,6 +66,7 @@
  * 将方法都静态后，可以方便使用但是该类韩式可以被其他对象建立对象的，为了更加严谨，强制让该类不能见了对象 将构造函数私有化
  * 
  * ## 单例设计模式 
+ * 
  */
 
 class Persion {
@@ -82,6 +83,25 @@ class Persion {
 
     public static void country() {// 静态方法只能访问静态成员
         System.out.println(country);
+    }
+}
+
+/*********** 单例模式 */
+
+class Single {
+    private init num;
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    private Single() {
+    }
+
+    private static Single s = new Single();
+
+    public static Single getInstance() {
+        return s;
     }
 }
 

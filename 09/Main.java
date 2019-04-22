@@ -22,6 +22,16 @@
  * }
  * 
  * 对捕获的异常 对象 使用 String getMessage()
+ * 
+ * 
+ * throw 和 throws 的区别
+ * 
+ * throws 使用在函数上
+ * throw 使用在函数内
+ * 
+ * throws 后面跟的是异常类 可以跟对个 用逗号隔开 
+ * throw 跟的是异常对象
+ * 
  */
 
 class Outer {
@@ -44,9 +54,30 @@ class Outer {
 
 class Demo {
     // 在功能上通过throws 的关键字声明了该功能会有可能出现的问题 提示使用者需要进行处理
+    // 这种方法不好
     int div(int a, int b) throws Exception {
         return a / b;
     }
+}
+
+/************************************************** 异常处理 */
+
+class FuException extends Exception {
+    private int value;
+
+    FuException() {
+        super();
+    }
+
+    FuException(String mag, int value) {
+        super(msg);
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
 }
 
 public class Main {
