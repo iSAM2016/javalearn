@@ -4,7 +4,7 @@
  * 1. 内部类可以直接访问外部类中的成员 包括私有 之所以可以直接访问外部类的成员，是因为内部类中持有一个外部类的引用 格式： 外部类名.this
  * 2.外部类要访问内部类，必须建立内部类对象
  * 
- * // TODO: 内部类 没有学
+ * // TODO: 内部类 没有学  finally
  * 
  * ##异常
  * 1.对于严重的：java 通过Error 来进行描述
@@ -62,22 +62,77 @@ class Demo {
 
 /************************************************** 异常处理 */
 
-class FuException extends Exception {
-    private int value;
+// class FuException extends Exception {
+// private int value;
 
-    FuException() {
-        super();
+// FuException() {
+// super();
+// }
+
+// FuException(String mag, int value) {
+// super(msg);
+// this.value = value;
+// }
+
+// public int getValue() {
+// return value;
+// }
+
+// }
+
+/************************************************** 异常处理 */
+
+class LangPingExpection extends Exception {
+    LangPingExpection(String message) {
+        super(message);
+    }
+}
+
+class MaoYanExpection extends Exception {
+    MaoYanExpection(String message) {
+        super(message);
+    }
+}
+
+class Computer {
+    private int state = 2;
+
+    public void run() throws LangPingExpection, MaoYanExpection {
+        if (state == 2) {
+            throw new LangPingExpection("蓝屏");
+        }
+        if (state == 3) {
+            throw new MaoYanExpection("冒烟了");
+        }
+        System.out.println("电脑运行");
+
     }
 
-    FuException(String mag, int value) {
-        super(msg);
-        this.value = value;
+    public void reset() {
+        state = 1;
+        System.out.println("电脑重启");
+    }
+}
+
+class Teacher {
+    private String name;
+    private Computer cmpt;
+
+    Teacher(String name) {
+        this.name = name;
+        cmpt = new Computer();
     }
 
-    public int getValue() {
-        return value;
-    }
+    public void prelect() {
+        try {
+            cmpt.run();
+        } catch (LangPingExpection e) {
+            cmpt.reset();
+        } catch (MaoYanExpection e) {
 
+        }
+        System.out.print("讲课");
+    }
 }
 
 public class Main {
@@ -93,6 +148,16 @@ public class Main {
             System.out.println(e.getMessage());
             System.out.println(e.toString()); // 异常名称： 异常信息
             e.printStackTrace();// 异常名称 异常信息 异常初夏位置
+        }
+
+        // 测试
+        Teacher t = new Teacher("毕老师");
+
+        try {
+            t.prelect();
+
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 }
