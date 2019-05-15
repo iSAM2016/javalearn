@@ -65,41 +65,18 @@
  * 接口中的成员修饰符是固定的
  *      成员变量：  public static final
  *      成员函数： public abstract
- * 
  *  接口这接口之间是继承关系
  *      继承是所属关系，（集合的一种）
  *      接口是体系以外的功能扩展，（集合以外的扩展）
+ *  接口特点
+ *      1.接口是对外暴露规则
+ *      2.接口是程序的功能扩展
+ *      3.接口可以用来多实现
+ *      4.类于接口之间是实现关系，而且类可以继承一个类的同时实现多个接口
+ *      5.接口和接口之间可以有继承关系
  * 
- * 
- * 
- * 模板方法：
- * 
+ * ## 模板方法：
  * 在定义功能的时候，功能的一部分是确定的， 但是有一部分的是不确定的，而确定的部分固定，不确定的部分暴露出去
- * 
- * 多态的体现是体现在类上
- * 
- * 
- * 1. 多态的体现 父类的引用指向了自己的子类对象，父类的引用也可以接收自己的子类对象
- * 
- * 2. 多态的前提 必须是类和类的关系，要么继承要么实现，通常还有个前提，存在覆盖
- * 
- * 3. 多态的应用
- * 
- * 4. 多态的好处 提高了程序的扩展性，
- * 
- * 5. 弊端 但是只能使用父类的引用访问父类中的成员
- * 
- * 
- * 多态的好处是：多态简化了对象调用
- * 
- * 
- *  1.接口是对外暴露规则
- *  2.接口是程序的功能扩展
- *  3.接口可以用来多实现
- *  4.类于接口之间是实现关系，而且类可以继承一个类的同时实现多个接口
- *  5.接口和接口之间可以有继承关系
- * 
- * 
  * //TODO: 模板方法  
  */
 
@@ -165,35 +142,6 @@ final class Final {
     void show() {
         System.out.println("final");
     }
-
-}
-
-abstract class Animal {
-
-    abstract void eat();
-
-}
-
-class Cat extends Animal {
-    public void eat() {
-        System.out.println("吃鱼");
-    };
-
-    public void catchMouse() {
-        System.out.println("抓老鼠");
-    };
-
-}
-
-class Dog extends Animal {
-    public void eat() {
-        System.out.println("骨头");
-    };
-
-    public void protectHpuse() {
-        System.out.println("看家");
-    };
-
 }
 
 /******************************************************* 接口 */
@@ -212,69 +160,6 @@ class Test extends Student implements Smoking {
 
     public void smoking() {
     }
-}
-
-public class Main {
-    public static void main(String[] args) {
-
-        Cat c = new Cat();
-        Dog d = new Dog();
-        // function(c);
-        // function(d);
-
-        Animal a = new Cat(); // 类型提升 向上转型
-        a.eat();
-        // 如果想调用猫的独特方法 如何操作
-        // 强制将父类型的引用，转成子类型，向下转型
-        Cat cat = (Cat) a;
-
-        cat.catchMouse();
-
-        Do ds = new Do();
-        ds.dosome(new BaseStudent());
-        ds.dosome(new AdvStudent());
-
-        /**
-         * 不要出现这样的情况，将父类对象转成子类类型
-         * 
-         * 我们能转换的是父类应用指向了自己的子类对象时，该应用可以提升，也可以被强制转换
-         * 
-         * 多态始终变化的是自己
-         * 
-         * // Animal a = new Aaimal() cat c = (cat) A
-         */
-
-        // function(c);
-        // function(d);
-
-        // Z1 z = new Z1(0);
-        // z.show();
-        // System.out.println(z.houname);
-
-        // SubTime time = new SubTime();
-        // time.getTime();
-        Z1 z = new Z1(0);
-        z.show();
-        System.out.println(z.houname);
-        Test test = new Test();
-        System.out.println(test.NUM);
-        System.out.println(Test.NUM);
-        System.out.println(Inter.NUM);
-        // test.NUM = 7;error
-
-    }
-
-    public static void function(Animal animal) {
-        animal.eat();
-    }
-
-    // public static void function(Cat c) {
-    // c.eat();
-    // }
-
-    // public static void function(Dog c) {
-    // c.eat();
-    // }
 }
 
 /** 练习 */
@@ -326,26 +211,22 @@ class SubTime extends GetTime {
     }
 }
 
-/******* */
-class BaseStudent extends Student {
-    public void Study() {
-        System.out.println("base");
-    }
+public class Main {
+    public static void main(String[] args) {
+        // Z1 z = new Z1(0);
+        // z.show();
+        // System.out.println(z.houname);
 
-    public void Sleep() {
-        System.out.println("睡觉");
-    }
-}
+        // SubTime time = new SubTime();
+        // time.getTime();
+        Z1 z = new Z1(0);
+        z.show();
+        System.out.println(z.houname);
+        Test test = new Test();
+        System.out.println(test.NUM);
+        System.out.println(Test.NUM);
+        System.out.println(Inter.NUM);
+        // test.NUM = 7;error
 
-class AdvStudent extends Student {
-    public void Study() {
-        System.out.println("adv study");
-    }
-}
-
-class Do {
-    public static void dosome(Student bs) {
-        bs.Study();
-        bs.sleep();
     }
 }
