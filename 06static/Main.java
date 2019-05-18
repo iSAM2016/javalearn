@@ -94,6 +94,7 @@
  * //
  * 
  * ## 单例设计模式 
+ * 
  */
 
 /******** 什么时候使用静态 */
@@ -114,6 +115,7 @@ class Persion {
     }
 }
 
+<<<<<<< HEAD:06/Main.java
 /***************************************************** 静态代码块 */
 
 class StaticCode {
@@ -160,6 +162,28 @@ class StaticCodeDemo {
         System.out.println("f");
     }
 }
+=======
+/*********** 单例模式 */
+
+class Single {
+    private init num;
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    private Single() {
+    }
+
+    private static Single s = new Single();
+
+    public static Single getInstance() {
+        return s;
+    }
+}
+
+/******** 什么时候使用静态 */
+>>>>>>> c3cdc1ef9c7d9c716111019090f1812dd4418b4a:06static/Main.java
 
 public class Main {
     public static void main(String[] args) {
