@@ -14,6 +14,11 @@
  *      int     indexOf(object)
  *      int     lastindexOf(object)
  *      List    subList(from, to)
+ * 
+ * List 
+ *  --- vector 内部数组数据结构  是同步的 增删 查询都很慢
+ *  --- ArrayList 内部是数组数据结构  是不同步的  代替了 vector  查询的速度快
+ * --- LinkedList 内部是链表数据结构  是不同的  增删元素的速度会很快
  */
 import java.util.ArrayList;
 import java.util.Iterator;
