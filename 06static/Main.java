@@ -65,10 +65,39 @@
  * 
  * 将方法都静态后，可以方便使用但是该类韩式可以被其他对象建立对象的，为了更加严谨，强制让该类不能见了对象 将构造函数私有化
  * 
+ * 
+ * ###  静态代码块 
+ * 格式：
+ * static {
+ *  静态代码块中执行语句
+ * }
+ * 
+ *特点：  随着类的加载而而执行，只执行一次，并优先于主函数，用于给类进行初始化。 无法访问非静态常量
+ * 
+ * 
+ * ### 静态代码初始化过程
+ * 
+ * Person p = new Persion("zhang",20)
+ * 
+ * 该句话都做了什么
+ * 1.  因为new 用到了Persion.class 所以会找到Persion.class 文件并加载到内存中
+ * 2. 执行该类中的static 代码块 如果有的话，给persion.class 类进行初始化
+ * 3. 在堆内存中开辟空间，分配内存地址
+ * 4. 在堆内存中建立对象的特有属性，并进行默认初始化
+ * 5. 对属性进行显示初始化
+ * 6. 对对象进行构造代码初始化
+ * 7. 对对象进行对应的构造函数初始化
+ * 8. 将内存地址付给栈内存中的p 变量。
+ *  
+ * //TODO: ### 对象成员调用过程
+ * 
+ * //
+ * 
  * ## 单例设计模式 
  * 
  */
 
+/******** 什么时候使用静态 */
 class Persion {
     String name; // 成员变量 实例变量
     static String country = "cn";// 静态的成员变量 类变量
@@ -86,6 +115,54 @@ class Persion {
     }
 }
 
+<<<<<<< HEAD:06/Main.java
+/***************************************************** 静态代码块 */
+
+class StaticCode {
+    int num = 9;
+
+    static {
+        // 无法访问 内部变量
+        System.out.println("a");
+    }
+    {
+        System.out.println("c" + this.num);
+    }
+
+    StaticCode() {
+        System.out.println("b");
+    }
+
+    StaticCode(int x) {
+        System.out.println("d");
+    }
+
+    public static void show() {
+        System.out.println("show run");
+    }
+}
+
+class StaticCodeDemo {
+    static {
+        System.out.println("e");
+    }
+
+    public static void show() {
+        // new staticCode();// 注意只打印一次a 因为只加载一次类
+        // new staticCode();
+        // System.out.println("over");
+        // staticCode.show();
+        StaticCode s = null;
+        s = new StaticCode(3);
+
+        StaticCode.show();
+    }
+
+    static {
+        System.out.println("f");
+    }
+}
+=======
 /*********** 单例模式 */
 
 class Single {
@@ -106,6 +183,7 @@ class Single {
 }
 
 /******** 什么时候使用静态 */
+>>>>>>> c3cdc1ef9c7d9c716111019090f1812dd4418b4a:06static/Main.java
 
 public class Main {
     public static void main(String[] args) {
@@ -123,6 +201,8 @@ public class Main {
         // int max = tool.getMax(arr);
         int max = ArrayTool.getMax(arr);
         System.out.println(max);
-
+        /** 静态代码块 */
+        StaticCodeDemo scd = new StaticCodeDemo();
+        scd.show();
     }
 }
