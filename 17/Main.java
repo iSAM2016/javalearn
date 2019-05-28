@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.TreeSet;
 
 import persion.Persion;
+import persion.ComparatorByName;
 
 /*
  * #List 
@@ -33,9 +34,16 @@ import persion.Persion;
  * 
  * ## treeSet
  *  可以对set 集合中的元素进行排序，是不同步的
- *   判断元素唯一的方式吗， 就是根据比较方法的返回结果是否是0。是0 就是相同的元素，不存。
+ *   
+ * 判断元素唯一的方式吗， 就是根据比较方法的返回结果是否是0。是0 就是相同的元素，不存。
  * 
- *    方法1 让元素具有比较功能， 实现 comparable  
+ * ---方法1 让元素具有比较功能， 实现 comparable 接口， 覆盖compareTO 方法
+ *    
+ *    如果不要按照对象中具备的自然顺序进行排序，怎么版
+ *      可以使用treeset 集合第二种排序
+ * ----方法二 让集合自身具备计较功能，定义一个实现comparator  接口 覆盖 compare 方法，将该类对象作为参数传递给 treeset 集合的构造函数
+ * 
+ *     
  *
  */
 
@@ -111,7 +119,7 @@ class Main {
         }
         /**************************************************************** treeSet */
 
-        TreeSet treeset = new TreeSet();
+        TreeSet treeset = new TreeSet(new ComparatorByName());// 一个计较类
         // 是比较的fcompareTO 返回 -1 0 1
 
         treeset.add(new Persion("lisi4", 24));

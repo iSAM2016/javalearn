@@ -15,12 +15,14 @@ public class Persion extends Object {
     }
 
     // 重写hashcode
+    @Override
     public int hashCode() {
         System.out.println("........hashCode");
         return name.hashCode() + age;
     }
 
     // 判断内容
+    @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -37,7 +39,19 @@ public class Persion extends Object {
         return name;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
+
+    // treset 比较 自然排序
+    // public int compareTo(Object o) {
+    // Persion p = (Persion) o;
+    // int temp = this.age - p.age;
+    // return temp == 0 ? this.name.compareTo(p.name) : temp;
+    // }
+
 }
