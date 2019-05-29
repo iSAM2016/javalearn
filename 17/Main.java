@@ -43,6 +43,12 @@ import persion.ComparatorByName;
  *      可以使用treeset 集合第二种排序
  * ----方法二 让集合自身具备计较功能，定义一个实现comparator  接口 覆盖 compare 方法，将该类对象作为参数传递给 treeset 集合的构造函数
  * 
+ * 看到array 就要想到数组， 需要 想到快速查询
+ * 看到 link  就要想到 链表，就要想到增删块，  就要想到add get remove first last 方法
+ * hash 哈希表， 想到唯一性， 就需要想到元素需要覆盖 hashcode 和 requals 方法
+ * 看到 tree 就想打二叉树，想到排序，就想到连个接口 comparable Comparator
+ * 
+ * 这些常用的结合是不同步的
  *     
  *
  */
