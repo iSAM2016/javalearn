@@ -20,6 +20,8 @@
  * 查找： char charAt(index)
  * int indexof (string)
  * int lastIndexof (string)
+ * gethashcode() 获取 
+ * 
  * 
  * 
  */

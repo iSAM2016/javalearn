@@ -36,7 +36,7 @@
  * 2.集合的长度是可变的
  * 3. 不可以存储基本的数据类型, add的类型为Object 基本数据类型会被装箱
  * 
- *  collection 常见方法
+ * ### collection 常见方法
  * 
  * 1. 添加
  *  boolean add(Object obj)
@@ -65,10 +65,31 @@
  * boolean retainAll(Collection coll) 取交集
  * Object() toArray(): 将集合转换为数组
  * 
- * collection 
+ * ## collection 
  *  list--- 有序的 存入和取出的顺序一致，元素都有索引（角标） 元素可以重复
  *  set --- 元素不能重发 无序
  * 
+ * 
+ * ### lsit 特有的方法， 可以操作角标 add 
+ * 
+ * 1. 添加
+ *      void add(index, elemet)
+ *      void add(index, collection)
+ * 2. 删除
+ *      Object remvoe(index)
+ * 3. 修改
+ *      Object set(index, element)
+ * 4. 获取
+ *      Object  get(index)
+ *      int     indexOf(object)
+ *      int     lastindexOf(object)
+ *      List    subList(from, to)
+ * 
+ * #### List 
+ *  --- vector 内部数组数据结构  是同步的 增删 查询都很慢
+ *  --- ArrayList 内部是数组数据结构  是不同步的  代替了 vector  查询的速度快
+ *  --- LinkedList 内部是链表数据结构  是不哦同步的  增删元素的速度会很快
+ 
  * 
  */
 import java.util.ArrayList;
