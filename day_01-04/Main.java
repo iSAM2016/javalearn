@@ -6,6 +6,7 @@
  * 3.重载
  */
 public class Main {
+		
     public static void main(String[] args) {
         // 只能存储统一类型
         // 1 定义一个数组的格式为：数据类型[] 数组名称;
@@ -26,8 +27,8 @@ public class Main {
 
         // 静态初始化数组
         int[] arr = new int[] { 1, 2, 3, 4 };
-
-        // 动态初始化 数组溢出会有问题
+      
+        // 动态初始化 数组溢出会有问题 
         int[] arrs = new int[4];
         arrs[0] = 190;
         arrs[1] = 110;
