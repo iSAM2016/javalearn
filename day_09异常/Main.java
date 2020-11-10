@@ -63,20 +63,20 @@ class Demo {
 /************************************************** 异常处理 */
 
 // class FuException extends Exception {
-// private int value;
+//     private int value;
 
-// FuException() {
-// super();
-// }
+//     FuException() {
+//     super();
+//     }
 
-// FuException(String mag, int value) {
-// super(msg);
-// this.value = value;
-// }
+//     FuException(String mag, int value) {
+//     super(msg);
+//     this.value = value;
+//     }
 
-// public int getValue() {
-// return value;
-// }
+//     public int getValue() {
+//     return value;
+//     }
 
 // }
 

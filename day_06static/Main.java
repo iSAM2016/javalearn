@@ -1,5 +1,6 @@
 /*
  * # 面向对象
+ * 
  * ## static 关键字
  * 用法：用于修饰成员 成员变量成员函数 =》修饰之前（图1） 修饰之后 图2  特有内容在堆中，
  * 当成员被静态修饰后，就多了一个调用方法，除了可以被对象调用外，还可以被类名调用 。 类名.静态成员
@@ -12,13 +13,13 @@
  *  3. 被所有对象所共享
  *  4. 可以直接被类名调用
  * 
- * ### 实力变量和类变量的区别：
+ * ### 实例变量和类变量的区别：
  * 1. 存放位置、
  *   类变量随着类的加载而存在于方法区中
- *   势力变量随着对象的建立在堆内存中
+ *   实例变量随着对象的建立在堆内存中
  * 2.声明周期
  *  类变量的声明周期最长
- *  实力变量的生命周期随着对象的消失而消失 
+ *  实例变量的生命周期随着对象的消失而消失 
  * 
  * ### 静态使用注意
  * 1. 静态方法只能访问静态成员
@@ -47,6 +48,7 @@
  * 什么是静态？
  * 要从两方面下手
  * 因为静态修饰的内容有成员变量和函数
+ * 
  * 什么时候定义静态变量（类变量）呢
  * 当对象中出现共享数据时候，该数据被静态所修饰
  * 当对象中特有数据要定义成静态存在于内存中
@@ -88,12 +90,6 @@
  * 6. 对对象进行构造代码初始化
  * 7. 对对象进行对应的构造函数初始化
  * 8. 将内存地址付给栈内存中的p 变量。
- *  
- * //TODO: ### 对象成员调用过程
- * 
- * //
- * 
- * ## 单例设计模式 
  * 
  */
 
@@ -115,7 +111,6 @@ class Persion {
     }
 }
 
-<<<<<<< HEAD:06/Main.java
 /***************************************************** 静态代码块 */
 
 class StaticCode {
@@ -148,13 +143,12 @@ class StaticCodeDemo {
     }
 
     public static void show() {
-        // new staticCode();// 注意只打印一次a 因为只加载一次类
-        // new staticCode();
-        // System.out.println("over");
-        // staticCode.show();
+        new StaticCode();// 注意只打印一次a 因为只加载一次类
+        new StaticCode();
+        System.out.println("over");
+        StaticCode.show();
         StaticCode s = null;
         s = new StaticCode(3);
-
         StaticCode.show();
     }
 
@@ -162,11 +156,11 @@ class StaticCodeDemo {
         System.out.println("f");
     }
 }
-=======
+
 /*********** 单例模式 */
 
 class Single {
-    private init num;
+    private int num;
 
     public void setNum(int num) {
         this.num = num;
@@ -183,7 +177,6 @@ class Single {
 }
 
 /******** 什么时候使用静态 */
->>>>>>> c3cdc1ef9c7d9c716111019090f1812dd4418b4a:06static/Main.java
 
 public class Main {
     public static void main(String[] args) {
@@ -193,14 +186,14 @@ public class Main {
         p.show(); //
         System.out.println(Persion.country);
         // Persion.show(); // error 非静态不能访问静态 此时没有初始化
-        // Persion.close(); // 法从静态上下文中引用非静态 变量 name
+        Persion.close(); // 法从静态上下文中引用非静态 变量 name
         int[] arr = { 3, 1 };
         /********* 什么时候使用静态 */
         // 此时没有必要进行new 对象占用内存，Array 里面的东西都没有用到变量
         // ArrayTool tool = new ArrayTool();
         // int max = tool.getMax(arr);
-        int max = ArrayTool.getMax(arr);
-        System.out.println(max);
+        // int max = ArrayTool.getMax(arr);
+        // System.out.println(max);
         /** 静态代码块 */
         StaticCodeDemo scd = new StaticCodeDemo();
         scd.show();
