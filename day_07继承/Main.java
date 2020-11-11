@@ -92,20 +92,16 @@ abstract class Student {
 class Fu extends Student {
     public String houname = "isam2016";
     final int x = 3;
-
     Fu() {
         System.out.println("fu");
         this.houname = "isam2017";
     }
-
     Fu(int x) {
         System.out.println("fu" + x);
     }
-
     void study() {
         System.out.println("student");
     }
-
     int num = 4;
 
     // public void show() { 函数覆盖 子类不能覆盖，权限不够
@@ -199,7 +195,6 @@ abstract class GetTime {
         System.out.println("all-time:" + (end - start));
         // test.NUM = 7;error
     }
-
     public abstract void runcode();
 }
 

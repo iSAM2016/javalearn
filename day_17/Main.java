@@ -83,7 +83,7 @@ class Main {
 
         Iterator t = a1.iterator();
         while (t.hasNext()) {
-            // 重要
+            // 重要 集合会把对象自动提升为Object
             Persion p = (Persion) t.next();
             // System.out.println(p.getName());
         }

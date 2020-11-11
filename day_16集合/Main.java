@@ -121,7 +121,6 @@ class Main {
         for (Iterator it = coll.iterator(); it.hasNext();) {
             System.out.println(it.next());
         }
-
     }
 
     public static void main(String[] args) {

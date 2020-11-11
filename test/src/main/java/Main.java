@@ -196,6 +196,12 @@ public class Main {
         // System.out.println(max);
         /** 静态代码块 */
         StaticCodeDemo scd = new StaticCodeDemo();
-        scd.show();
+
+        String s = "Hello";
+String t = s;
+s = s + "t";
+System.out.println(t);
+System.out.println(s);
+        // scd.show();
     }
 }
