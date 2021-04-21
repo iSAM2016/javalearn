@@ -109,6 +109,26 @@ class Persion {
     public static void country() {// 静态方法只能访问静态成员
         System.out.println(country);
     }
+
+    public static void main(String[] args) {
+        /******** 什么时候使用静态 */
+        Persion p = new Persion();
+        p.name = "zhangssh";
+        p.show(); //
+        System.out.println(Persion.country);
+        // Persion.show(); // error 非静态不能访问静态 此时没有初始化
+        Persion.close(); // 法从静态上下文中引用非静态 变量 name
+        int[] arr = { 3, 1 };
+        /********* 什么时候使用静态 */
+        // 此时没有必要进行new 对象占用内存，Array 里面的东西都没有用到变量
+        // ArrayTool tool = new ArrayTool();
+        // int max = tool.getMax(arr);
+        // int max = ArrayTool.getMax(arr);
+        // System.out.println(max);
+        /** 静态代码块 */
+        StaticCodeDemo scd = new StaticCodeDemo();
+        scd.show();
+    }
 }
 
 /***************************************************** 静态代码块 */
@@ -176,26 +196,5 @@ class Single {
     }
 }
 
-/******** 什么时候使用静态 */
 
-public class Main {
-    public static void main(String[] args) {
 
-        Persion p = new Persion();
-        p.name = "zhangssh";
-        p.show(); //
-        System.out.println(Persion.country);
-        // Persion.show(); // error 非静态不能访问静态 此时没有初始化
-        Persion.close(); // 法从静态上下文中引用非静态 变量 name
-        int[] arr = { 3, 1 };
-        /********* 什么时候使用静态 */
-        // 此时没有必要进行new 对象占用内存，Array 里面的东西都没有用到变量
-        // ArrayTool tool = new ArrayTool();
-        // int max = tool.getMax(arr);
-        // int max = ArrayTool.getMax(arr);
-        // System.out.println(max);
-        /** 静态代码块 */
-        StaticCodeDemo scd = new StaticCodeDemo();
-        scd.show();
-    }
-}
