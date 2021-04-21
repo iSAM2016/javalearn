@@ -5,7 +5,7 @@
  * 2. 选择排序 
  * 3.重载
  */
-public class Main {                              
+public class Base {
 		
     public static void main(String[] args) {
         // 只能存储统一类型

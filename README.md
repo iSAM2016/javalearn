@@ -241,6 +241,7 @@ System.out.println(f3 == f4);// false
 
 equals() : 它的作用也是判断两个对象是否相等，它不能用于比较基本数据类型的变量。equals()方法存在于Object类中，而Object类是所有类的直接或间接父类。
 
+
 Object类equals()方法：
 ```java
 public boolean equals(Object obj) {
@@ -302,6 +303,36 @@ public boolean equals(Object anObject) {
 }
 
 ```
+### hashCode()与 equals()
+面试官可能会问你：“你重写过 hashcode 和 equals 么，为什么重写 equals 时必须重写 hashCode 方法？”
+
+1)hashCode()介绍:
+
+hashCode() 的作用是获取哈希码，也称为散列码；它实际上是返回一个 int 整数。这个哈希码的作用是确定该对象在哈希表中的索引位置。hashCode() 定义在 JDK 的 Object 类中，这就意味着 Java 中的任何类都包含有 hashCode() 函数。另外需要注意的是： Object 的 hashcode 方法是本地方法，也就是用 c 语言或 c++ 实现的，该方法通常用来将对象的 内存地址 转换为整数之后返回。
+
+`public native int hashCode();`
+
+散列表存储的是键值对(key-value)，它的特点是：能根据“键”快速的检索出对应的“值”。这其中就利用到了散列码！（可以快速找到所需要的对象）
+
+2)为什么要有 hashCode？
+
+我们以“HashSet 如何检查重复”为例子来说明为什么要有 hashCode？
+
+当你把对象加入 HashSet 时，HashSet 会先计算对象的 hashcode 值来判断对象加入的位置，同时也会与其他已经加入的对象的 hashcode 值作比较，如果没有相符的 hashcode，HashSet 会假设对象没有重复出现。但是如果发现有相同 hashcode 值的对象，这时会调用 equals() 方法来检查 hashcode 相等的对象是否真的相同。如果两者相同，HashSet 就不会让其加入操作成功。如果不同的话，就会重新散列到其他位置。（摘自我的 Java 启蒙书《Head First Java》第二版）。这样我们就大大减少了 equals 的次数，相应就大大提高了执行速度。
+
+3)为什么重写 equals 时必须重写 hashCode 方法？
+
+如果两个对象相等，则 hashcode 一定也是相同的。两个对象相等,对两个对象分别调用 equals 方法都返回 true。但是，两个对象有相同的 hashcode 值，它们也不一定是相等的 。因此，equals 方法被覆盖过，则 hashCode 方法也必须被覆盖。
+
+hashCode()的默认行为是对堆上的对象产生独特值。如果没有重写 hashCode()，则该 class 的两个对象无论如何都不会相等（即使这两个对象指向相同的数据）
+
+4)为什么两个对象有相同的 hashcode 值，它们也不一定是相等的？
+
+在这里解释一位小伙伴的问题。以下内容摘自《Head Fisrt Java》。
+
+因为 hashCode() 所使用的杂凑算法也许刚好会让多个对象传回相同的杂凑值。越糟糕的杂凑算法越容易碰撞，但这也与数据值域分布的特性有关（所谓碰撞也就是指的是不同的对象得到相同的 hashCode。
+
+我们刚刚也提到了 HashSet,如果 HashSet 在对比的时候，同样的 hashcode 有多个对象，它会使用 equals() 来判断是否真的相同。也就是说 hashcode 只是用来缩小查找成本。
 
 ## 数组
 1. 数组只能存储统一类型
@@ -622,6 +653,14 @@ C:子类的构造函数
 
 功能上通过throws 的关键字声明了该功能会有可能出现的问题 提示使用者需要进行处理
   
+
+## 容器
+* 集合 collection
+  * List
+  * Set
+  * Queue
+* 图 Map
+  
 ## 集合
 集合的特点：
   1. 用于存储对象的容器
@@ -750,3 +789,122 @@ map 常用的子类
 集合框架的构成和分类
 
 ![](./img/QQ20190516-122645@2x.png)
+
+
+2.5.1. String StringBuffer 和 StringBuilder 的区别是什么? String 为什么是不可变的?
+
+3.3. 多线程
+
+
+## 线程
+
+线程就是独立的执行路径
+
+在程序运行时， 即使没有自己创建线程，后台也会有多个线程，如主线程，gc 线程，
+
+main() 称之为主线程，为系统的入口，用于执行这个程序
+
+在一个进程中，如果开辟了多个线程,线程的运用调度器安排调度，调度器是与操作系统紧密相关的，先后顺序是不能认为的干预的
+
+对于同一份资源操作的时候，会存在资源抢夺的问题，需要加入并发控制
+
+线程会带来额外的开销，如cpu 调度，并发控制开销
+
+每个线程在自己的共足迹内存交互，内存控制不当会造成数据不一致
+
+
+### 线程创建的方式
+
+1. Thread.class  继承Thread类 重点
+2. Runnable 接口  实现Runnable 接口 重点
+3. Callabled 接口 实现Callabled 接口
+
+
+自定义线程继承Thread 类
+重写run() 方法 编写线程执行体
+创建线程对象，调用start() 方法启动线程
+
+
+线程开启不一定立即执行，由cpu 调度
+
+多个线程操作同一个资源的情况下，线程不安全，数据紊乱
+
+## 静态代理
+
+1. 真实对象和代理对象都要实现同一个接口
+2. 代理对象要代理真实角色
+3. 好处： 代理对象可以做很多真实队形做不了的事情
+4. 真实对象专注做自己的事情
+
+### Lamda 表达式
+
+函数式接口的定义： 
+ 1. 任何接口如果只包含唯一一个抽象方法，那么他就是一个函数式接口
+
+```
+pubclic interface Runnable{
+    public abstract void run();
+}
+```
+2. 对于函数式接口，我们可以通过lambda 表达式来创建该接口的对象
+
+
+### 线程状态
+![](./img/QQ20201114-111817@2x.png)
+![](./img/QQ20201114-112527@2x.png)
+![](./img/QQ20201114-112609@2x.png)
+
+创建状态 阻塞状态 死亡状态 就绪状态 运行状态
+
+```java
+1. 建议线程正常停止 ---> 利用次数 不建议死循环
+2. 建议使用标识符---》 设置一个标志位
+3. 不要使用stop 或者等过时的或者jDK 不建议使用的方法
+
+public class Teststop implement Runnable {
+    //1设置一个标志位
+    private boolean flag = true;
+    
+    @Overvird 
+    public void run(){
+        int i =0;
+        while(flag){
+            System.out.println("run... Thread" +i++);
+        }
+    }
+    //2 设置一个公开的方法停止线程，转换标志位
+    public void stop(){
+        this.flag = false;
+    }
+
+    public static void main(String[] arg){
+        Teststop teststop = new TestStop();
+        new Thread(teststop).start();
+        for (int i = 0; i< 1000; i++){
+            if(i==900){
+                // 调用stop 方法
+                testStop.stop();
+            }
+        }
+    }
+    
+}
+
+```
+执行过程
+![](./img/QQ20210313-202024@2x.png)
+
+就绪状态
+
+就绪状态的线程又叫可运行状态，表示当前的线程具有抢夺cpu时间片的权利（cpu 时间片就是执行权），当一个线程抢夺到cpu 时间片之后，就开始执行run 方法，run方法的开始执行标志着线程进入运行状态
+
+运行状态
+
+run 方法开始执行标志着这个线程进入运行状态，当之前占有的cpu 时间片用完之后，会重新回到就绪状态继续抢夺cpu 时间片，当再次抢夺时间cpu时间之后，会重新进入run 方法，接着上一次的代码继续往下执行
+
+
+当一个线程遇到了阻塞事件，例如接收用户键盘输入，或者sleep 方法等，此时线程就会进入阻塞转态，阻塞状态的线程会放弃之前占有的cpu 时间片
+
+
+锁池locakpool：（synchronized） 进入锁池可以理解为是一种阻塞
+在这里栈共享对象的对象锁，线程进入锁池找共享对象的对象锁的时候，就会释放之前占有的cpu 时间片，有可能找到了，也有可能没有找到，没有找到则在锁池中等待，如果找到了就会进入就绪状态抢夺cpu 时间片

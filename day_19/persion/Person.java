@@ -1,6 +1,6 @@
 package persion;
 
-public class Persion {
+public class Person {
     public int age;
     private String name;
     
