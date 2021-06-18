@@ -1,92 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6040f4bf-f127-44ee-824d-0dd31c8a17a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/learn-parent/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learn-parent/src/main/java/com/thread/MyRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learn-parent/src/main/java/com/thread/MyRunnabled2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learn-parent/src/main/java/com/thread/MyRunnabled4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learn-parent/src/main/java/com/thread/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c179bafe-0ce1-4038-ba19-e56deb155a1c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/day_20/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/Account/AccountThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/Account/Accounts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/Account/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/MyThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/Test_06.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/ThreadTest03.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/ThreadTest05.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/ThreadTest08.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/Threads.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/dead/DeadLock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/dead/MyThread1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/dead/MyThread2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/exam1/Exam01.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/exam1/MyThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/com/learn/exam1/Myclass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/day_20.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/Account/AccountThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/Account/Accounts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/Account/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/MyRunnable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/MyRunnabled2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/MyRunnabled4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/MyThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/Test_06.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/ThreadTest03.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/ThreadTest05.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/ThreadTest08.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/Threads.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/dead/DeadLock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/dead/MyThread1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/dead/MyThread2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/exam1/Exam01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/exam1/MyThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/com/learn/exam1/Myclass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_20/out/production/day_20/day_20.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javacode.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/day_20.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/out/production/day_20/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/out/production/day_20/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/out/production/day_20/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/out/production/day_20/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/out/production/day_20/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javacode/out/production/day_20/day_20.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/Persion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/Single.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/StaticCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/StaticCodeDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/target/classes/Persion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/target/classes/Single.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/target/classes/StaticCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/target/classes/StaticCodeDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day_20/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/day_20/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javacode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/javacode.iml" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,10 +21,9 @@
     <session id="-575484131">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -115,9 +38,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1440" />
-    <option name="y" value="167" />
-    <option name="width" value="1080" />
+    <option name="x" value="769" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectView">
@@ -126,7 +49,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,15 +56,11 @@
               <item name="javacode" type="b2602c69:ProjectViewProjectNode" />
               <item name="javacode" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="javacode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javacode" type="462c0819:PsiDirectoryNode" />
-              <item name="learn-parent" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -169,30 +87,32 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6040f4bf-f127-44ee-824d-0dd31c8a17a6" name="Default Changelist" comment="" />
-      <created>1619345728689</created>
+      <changelist id="c179bafe-0ce1-4038-ba19-e56deb155a1c" name="Default Changelist" comment="" />
+      <created>1622965665874</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1619345728689</updated>
-      <workItem from="1619345730060" duration="9000" />
-      <workItem from="1620643352672" duration="194000" />
-      <workItem from="1620695893738" duration="2000" />
+      <updated>1622965665874</updated>
+      <workItem from="1622965674117" duration="134000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205000" />
+    <option name="totallyTimeSpent" value="134000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="167" width="1080" height="877" extended-state="0" />
+    <frame x="769" y="23" width="1440" height="877" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25240847" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
