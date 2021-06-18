@@ -11,8 +11,8 @@ synchronied
 乐观锁 悲观锁 是策略
 
 加锁的目的就是保证操作的原子性
-2 volatile 关键字
 
+2 volatile 关键字
 
 3 wait& notify 
 
