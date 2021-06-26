@@ -30,6 +30,10 @@
  * Hashtable: 内部结构是哈希表 是同步的， 不允许null 作为键，nll 作为值
  * HashMap: 内部结构  是哈希表 不是同步的，允许null 作为键， null 作为值
  * TreeMap: 内部结构是二叉树，不是同步的， 可以对map 集合中的键进行排序
+ * 
+ * 
+ * Collections && Arrays
+ * 
  */
 
 class Main {
@@ -74,8 +78,16 @@ class Main {
             System.out.println(iterator1.next());
         }
     }
+
     public static void main(String[] args) {
         Map<Integer,String> map = new HashMap<Integer,String>();
-        method(map);
+        // method(map);
+
+        /**
+         * Collections 是集合框架的工具类
+         * 里面的方法都是静态的
+         */
+        Collections.sort();
+
     }
 }
