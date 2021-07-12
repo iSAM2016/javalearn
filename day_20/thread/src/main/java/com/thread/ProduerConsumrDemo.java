@@ -40,7 +40,6 @@ class  MyResrouce {
         flag = false;
         notifyAll();
     }
-
 }
 
 class Producer implements  Runnable{

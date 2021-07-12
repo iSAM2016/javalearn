@@ -1,5 +1,7 @@
 package com.learn;
 
+import com.learn.first.MyThread;
+
 /**
  * 怎么获取当前线程对象
  * Thread.currentThread(); 静态方法 出现在哪里就是那个线程

@@ -52,8 +52,6 @@ public class StopThreadDemo {
             System.out.println("main..." + num);
         }
         System.out.println("over");
-
-
     }
 
 }
